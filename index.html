@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Four Buyers One Site</title>
+  <meta name="description" content="A page-by-page look at jpaustin.com: what is on the site today, the four unrelated buyers it tries to serve with one homepage, the sourcing question vermiculite buyers ask, what Wix can and cannot do, and a costed plan.">
+  <meta name="robots" content="noindex">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Four Buyers One Site">
+  <meta property="og:description" content="A page-by-page look at jpaustin.com: what is on the site today, the four unrelated buyers it tries to serve with one homepage, the sourcing question vermiculite buyers ask, what Wix can and cannot do, and a costed plan.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232E5BBA'/%3E%3Cg stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M9 10h14'/%3E%3Cpath d='M9 16h14'/%3E%3Cpath d='M9 22h8'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    /* Document skeleton. The artifact runtime supplies these; a standalone
+       deploy declares them itself. [hidden] is load-bearing: the tab panels
+       are toggled with el.hidden. */
+    :root{
+      color-scheme: light;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    html{ -webkit-text-size-adjust: 100%; }
+    body{ margin: 0; }
+    img{ max-width: 100%; }
+    [hidden]{ display: none !important; }
+  </style>
+  <style>
+/* Layout: a plain working audit. Warm industrial palette taken from the
+   material itself, bronze on a warm off-white. */
+:root{
+  --paper:#F6F4F0; --surface:#FFFFFF; --sunk:#EBE7E0;
+  --ink:#1C1A17; --dim:#5B554C; --faint:#8E877B;
+  --line:#E0DBD2; --line2:#C6BFB2;
+  --bronze:#8C5420; --bronze-lt:#C08445; --slate:#2F4A5C;
+  --ok:#2A6B45; --warn:#9A6B12; --bad:#A33427;
+
+  --display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --body:'Barlow','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --paper:#15130F; --surface:#1E1B16; --sunk:#191610;
+  --ink:#F0ECE4; --dim:#A8A196; --faint:#746D62;
+  --line:#2E2A23; --line2:#423D34;
+  --bronze:#D79657; --bronze-lt:#E8B987; --slate:#7FA6BD;
+  --ok:#4CAE7A; --warn:#D2A33F; --bad:#E0705F;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#15130F; --surface:#1E1B16; --sunk:#191610;
+  --ink:#F0ECE4; --dim:#A8A196; --faint:#746D62;
+  --line:#2E2A23; --line2:#423D34;
+  --bronze:#D79657; --bronze-lt:#E8B987; --slate:#7FA6BD;
+  --ok:#4CAE7A; --warn:#D2A33F; --bad:#E0705F;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--surface)}
+.wrap{max-width:1140px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+.masthead{position:sticky;top:env(safe-area-inset-top,0px);z-index:19;background:var(--surface);border-bottom:1px solid var(--line)}
+.mast-in{display:flex;align-items:center;gap:12px;padding-block:13px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:22px;margin:0;letter-spacing:.01em;text-transform:uppercase}
+.brand span{color:var(--bronze)}
+.tagline{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint)}
+.tbtn{margin-left:auto;font-size:12.5px;font-weight:500;background:var(--sunk);color:var(--dim);
+  border:1px solid var(--line);border-radius:7px;padding:6px 12px;cursor:pointer;font-family:inherit}
+.tbtn:hover{color:var(--ink);border-color:var(--line2)}
+
+.rail{display:flex;overflow-x:auto;border-bottom:1px solid var(--line);background:var(--surface);
+  position:sticky;top:calc(env(safe-area-inset-top,0px) + 55px);z-index:18}
+.rail-in{display:flex;gap:2px}
+.tab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;cursor:pointer;
+  padding:12px 15px 9px;font-family:inherit;font-size:13.5px;font-weight:500;color:var(--dim);white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--bronze);border-bottom-color:var(--bronze);font-weight:700}
+.tab em{font-family:var(--mono);font-style:normal;font-size:9.5px;color:var(--faint);margin-left:6px;vertical-align:1px}
+
+main{padding-block:26px 40px}
+.lede{max-width:64ch;margin:0 0 20px}
+.lede h2{font-family:var(--display);font-size:clamp(27px,4.4vw,40px);font-weight:700;line-height:1.05;
+  margin:0 0 9px;text-wrap:balance;letter-spacing:.005em}
+.lede p{margin:0;color:var(--dim);font-size:14.5px}
+
+.note{display:flex;gap:11px;background:var(--surface);border:1px solid var(--line);
+  border-left:3px solid var(--warn);border-radius:6px;padding:12px 15px;margin-bottom:20px;font-size:13.5px}
+.note.good{border-left-color:var(--ok)} .note.bad{border-left-color:var(--bad)}
+.note strong{color:var(--warn);font-weight:700;white-space:nowrap}
+.note.good strong{color:var(--ok)} .note.bad strong{color:var(--bad)}
+.note p{margin:0;color:var(--dim)}
+
+.lab{display:grid;grid-template-columns:272px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){ .lab{grid-template-columns:1fr} }
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px}
+.panel h3,.stage-h h3{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);font-weight:500;margin:0 0 12px}
+.stage{background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:16px}
+.stage-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.stage-h .k{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+:where(button,select,input,a):focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+
+/* audit list */
+.finds{display:grid;gap:9px}
+.find{display:grid;grid-template-columns:76px minmax(0,1fr);gap:13px;background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;padding:13px 15px}
+.sev{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  border-radius:4px;padding:4px 0;text-align:center;height:fit-content}
+.sev.hi{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.sev.md{background:color-mix(in srgb,var(--warn) 17%,transparent);color:var(--warn)}
+.sev.lo{background:var(--sunk);color:var(--dim)}
+.find b{display:block;font-size:13.5px;margin-bottom:3px}
+.find p{margin:0;font-size:12.5px;color:var(--dim)}
+.find code{font-family:var(--mono);font-size:11.5px;background:var(--sunk);padding:1px 5px;border-radius:3px}
+
+/* buyer picker */
+.picks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pick{appearance:none;cursor:pointer;font-family:inherit;text-align:left;width:100%;
+  background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:11px 12px}
+.pick[aria-pressed="true"]{background:var(--bronze);border-color:var(--bronze);color:#fff}
+.pick b{display:block;font-size:12.5px;font-weight:700;margin-bottom:2px}
+.pick span{font-size:10.5px;opacity:.8}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){ .cols{grid-template-columns:1fr} .picks{grid-template-columns:1fr} }
+.col{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.col h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;margin:0 0 10px;font-weight:500}
+.col.need h4{color:var(--ok)} .col.has h4{color:var(--bad)}
+.col ul{margin:0;padding-left:17px;font-size:13px;color:var(--dim)}
+.col li{margin-bottom:6px}
+.col li:last-child{margin-bottom:0}
+
+.gap{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--bronze);
+  border-radius:6px;padding:14px 16px;margin-top:12px}
+.gap b{font-family:var(--display);font-size:19px;font-weight:700;display:block;margin-bottom:4px}
+.gap p{margin:0;font-size:13px;color:var(--dim)}
+
+.tbl-w{overflow-x:auto;margin-top:15px;border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface)}
+th{text-align:left;font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
+  font-weight:500;padding:10px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td code{font-family:var(--mono);font-size:11.5px;background:var(--sunk);padding:2px 6px;border-radius:3px}
+.pill{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.pill.no{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.pill.mid{background:color-mix(in srgb,var(--warn) 17%,transparent);color:var(--warn)}
+
+.steps{display:grid;gap:9px}
+.step{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;padding:13px 15px}
+.step .n{font-family:var(--mono);font-size:11.5px;font-weight:700;color:#fff;background:var(--bronze);
+  border-radius:5px;display:grid;place-items:center;height:24px}
+.step b{display:block;font-size:13px;margin-bottom:3px}
+.step p{margin:0;font-size:12.5px;color:var(--dim)}
+
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:14px}
+.money div{background:var(--surface);padding:13px 15px}
+.money .l{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:5px}
+.money .v{font-family:var(--display);font-size:26px;font-weight:700;display:block;line-height:1}
+
+.foot{border-top:1px solid var(--line);margin-top:32px;padding-block:20px 10px;color:var(--faint);
+  font-family:var(--mono);font-size:10.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap mast-in">
+    <h1 class="brand">Four Buyers<span>.</span> One Site<span>.</span></h1>
+    <span class="tagline">jpaustin.com &middot; looked at properly</span>
+    <button class="tbtn" id="theme" type="button">Theme</button>
+  </div>
+</header>
+
+<div class="rail"><div class="wrap rail-in" role="tablist" aria-label="Sections">
+  <button class="tab" role="tab" aria-selected="true"  aria-controls="p1" id="t1" type="button">What I found<em>01</em></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2" type="button">Four buyers<em>02</em></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3" type="button">Trust<em>03</em></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p4" id="t4" type="button">Wix<em>04</em></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p5" id="t5" type="button">Plan<em>05</em></button>
+</div></div>
+
+<main class="wrap">
+
+<!-- ======== 01 AUDIT ======== -->
+<section id="p1" role="tabpanel" aria-labelledby="t1">
+  <div class="lede">
+    <h2>I read your site before writing to you</h2>
+    <p>Every item below is on jpaustin.com right now and you can check each one in under a minute. None of
+       it is guesswork about your business, and none of it is a criticism of the company. It is a list of
+       things a visitor sees that you probably stopped seeing years ago.</p>
+  </div>
+
+  <div class="finds">
+    <div class="find"><span class="sev hi">Costing you</span><div>
+      <b>No safety or technical documents anywhere</b>
+      <p>The navigation has "Sizing &amp; Sieve Analysis" and "Technical Data", but there is nothing a buyer
+         can download and forward. An industrial buyer specifying material needs a sheet they can attach to
+         a purchase order. Right now they have to phone and ask, and plenty will not.</p></div></div>
+
+    <div class="find"><span class="sev hi">Costing you</span><div>
+      <b>Nothing says where the vermiculite comes from</b>
+      <p>The site says the product is "completely non-toxic and inert" and offers no evidence for it. In
+         this material, that is the one claim buyers want backed up. See tab 03.</p></div></div>
+
+    <div class="find"><span class="sev hi">Costing you</span><div>
+      <b>OMRI organic certification is mentioned and never documented</b>
+      <p>For a nursery or an organic grower, OMRI listing is a purchasing requirement, not a nice line. It
+         should be a downloadable certificate and a search term you rank for. It is currently a phrase.</p></div></div>
+
+    <div class="find"><span class="sev md">Dates you</span><div>
+      <b>A COVID-19 update is still in the main navigation</b>
+      <p>And the link points at <code>copy-of-contact-us</code>, which is a duplicated page somebody made in
+         a hurry and never removed. Every visitor sees the nav item.</p></div></div>
+
+    <div class="find"><span class="sev md">Dates you</span><div>
+      <b>The footer reads &copy; Copyright 2015</b>
+      <p>Eleven years out of date on a company that has traded since 1962. It is a two-minute fix and it is
+         the first thing a careful buyer notices.</p></div></div>
+
+    <div class="find"><span class="sev md">Dates you</span><div>
+      <b>A product page address is misspelled</b>
+      <p><code>square-foot-gardering</code>. It still works, but it shows in the address bar and in search
+         results, and it cannot be found by anyone searching the correct spelling.</p></div></div>
+
+    <div class="find"><span class="sev lo">Worth fixing</span><div>
+      <b>Four different businesses share one front door</b>
+      <p>Pool aggregate, OMRI horticultural, steel and industrial packing, and square foot gardening are
+         four unrelated buyers. One homepage is currently trying to greet all of them. Tab 02.</p></div></div>
+  </div>
+
+  <div class="note" style="margin-top:18px"><strong>Not on this list</strong>
+    <p>Your products, your prices and your business. Sixty-four years of trading is the asset here. The
+       website is just not currently carrying it.</p></div>
+</section>
+
+<!-- ======== 02 BUYERS ======== -->
+<section id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+  <div class="lede">
+    <h2>Four buyers who have nothing in common</h2>
+    <p>These four lines are on one site with one homepage. They buy differently, in different quantities,
+       for different reasons, and they need completely different pages. Pick one.</p>
+  </div>
+
+  <div class="lab">
+    <div class="panel">
+      <h3>Who is visiting</h3>
+      <div class="picks" id="picks"></div>
+      <div class="note" style="margin:15px 0 0"><strong>Why it matters</strong>
+        <p>Each of these arrives from a different search and leaves for a different reason. One page cannot
+           answer four questions.</p></div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><h3 id="bName">Buyer</h3><span class="k" id="bOrder">order size</span></div>
+      <div class="cols">
+        <div class="col need"><h4>What they need to see</h4><ul id="bNeed"></ul></div>
+        <div class="col has"><h4>What the site gives them now</h4><ul id="bHas"></ul></div>
+      </div>
+      <div class="gap" id="bGap"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== 03 TRUST ======== -->
+<section id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+  <div class="lede">
+    <h2>Buyers meet Libby before they meet you</h2>
+    <p>This is not a question about your product. It is a question about what your website answers, and
+       right now it answers nothing.</p>
+  </div>
+
+  <div class="note bad"><strong>To be clear</strong>
+    <p>I am not suggesting anything about your material. I am pointing out that your site makes a safety
+       claim with nothing behind it, in the one mineral where buyers have learned to ask.</p></div>
+
+  <div class="tbl-w" style="margin-top:0"><table>
+    <thead><tr><th>The situation</th><th>Why it reaches you</th></tr></thead>
+    <tbody>
+      <tr><td><b>Vermiculite from Libby, Montana carried tremolite asbestos</b></td>
+        <td>Mined by W.R. Grace until 1990 and shipped to more than 200 processing plants across the United States, much of it sold as Zonolite attic insulation.</td></tr>
+      <tr><td><b>It is still live news</b></td>
+        <td>The EPA cleanup has passed $600 million and continues. Libby was in the national press again this year.</td></tr>
+      <tr><td><b>The rule buyers apply</b></td>
+        <td>Material from an unverified mine source gets treated as potentially asbestos-containing. Not because it is, but because nobody has said otherwise.</td></tr>
+      <tr><td><b>Where that leaves you</b></td>
+        <td>Trading since 1962, through the whole of that period, with a website that does not name a mine, publish an SDS or show a test result. The buyer fills in the silence themselves.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="steps" style="margin-top:18px">
+    <div class="step"><span class="n">1</span><div><b>Name the source</b>
+      <p>One sentence saying where your ore comes from. For a company that has been doing this since 1962
+         and buys from a known mine, this is the single highest-value sentence on the whole site.</p></div></div>
+    <div class="step"><span class="n">2</span><div><b>Publish the safety data sheet</b>
+      <p>A PDF on every product page. You almost certainly already have one, because your industrial
+         customers will have asked for it. It just is not on the website.</p></div></div>
+    <div class="step"><span class="n">3</span><div><b>Put the OMRI certificate where growers can download it</b>
+      <p>You have the certification. Right now it is a sentence. As a downloadable certificate it is a
+         reason to buy from you instead of the next supplier.</p></div></div>
+    <div class="step"><span class="n">4</span><div><b>Say it plainly, once, and stop</b>
+      <p>A short, factual sourcing and safety page. Not defensive, not long. Suppliers who address this
+         directly look more credible than suppliers who never raise it.</p></div></div>
+  </div>
+
+  <div class="note good" style="margin-top:18px"><strong>The upside</strong>
+    <p>Almost nobody in this trade does this well. A clear sourcing statement and a downloadable SDS would
+       put you ahead of most of your competition on the thing buyers are quietly worried about, and it
+       costs you a page and a few PDFs you already own.</p></div>
+</section>
+
+<!-- ======== 04 WIX ======== -->
+<section id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+  <div class="lede">
+    <h2>Staying on Wix is the right call</h2>
+    <p>You already have it, your team can edit it, and nothing here needs a different platform. Worth
+       knowing what it does well and where it will push back, so nobody is surprised later.</p>
+  </div>
+
+  <div class="tbl-w" style="margin-top:0"><table>
+    <thead><tr><th>What you want</th><th>On Wix</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>A cleaner, current design</td><td><span class="pill ok">Straightforward</span></td>
+        <td>This is what Wix is for. The editor gives real layout control once the structure is decided.</td></tr>
+      <tr><td>Downloadable SDS and certificates</td><td><span class="pill ok">Straightforward</span></td>
+        <td>Upload PDFs, link from each product page. No add-on needed.</td></tr>
+      <tr><td>Separate paths for four buyers</td><td><span class="pill ok">Straightforward</span></td>
+        <td>A structure problem rather than a platform one.</td></tr>
+      <tr><td>Your team editing text and prices</td><td><span class="pill ok">Straightforward</span></td>
+        <td>Which is the main reason to stay put.</td></tr>
+      <tr><td>Keeping your current web addresses</td><td><span class="pill mid">Needs care</span></td>
+        <td>Renaming pages changes their address. Anything already linked or printed needs a redirect setting up, which Wix supports but does not do by itself.</td></tr>
+      <tr><td>Page speed</td><td><span class="pill mid">Needs care</span></td>
+        <td>Wix is heavier than hand-built. Keeping images sized properly and the page count sensible matters more here than on other platforms.</td></tr>
+      <tr><td>Loosely copying another site's design</td><td><span class="pill mid">Depends</span></td>
+        <td>Layout and feel, yes. If the site you like was custom built, some specific effects will not transfer exactly, and I would tell you which before starting rather than after.</td></tr>
+      <tr><td>Copying another site's text or images</td><td><span class="pill no">No</span></td>
+        <td>Design direction is fine to follow. Their words and photographs are theirs. Everything stays your content.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note" style="margin-top:18px"><strong>The missing piece</strong>
+    <p>Your post mentions another website you would like to loosely copy, and does not say which one. That
+       is the single most useful thing you could send me. Everything above is platform truth; the specific
+       answer depends entirely on what that site is.</p></div>
+</section>
+
+<!-- ======== 05 PLAN ======== -->
+<section id="p5" role="tabpanel" aria-labelledby="t5" hidden>
+  <div class="lede">
+    <h2>Fifty-two hours, start to finish</h2>
+    <p>At $25 an hour. Billed as we go, no deposit, and you can stop after any stage. The order matters:
+       the structure is settled before anything is designed, because redesigning a page twice is how small
+       jobs turn into long ones.</p>
+  </div>
+
+  <div class="tbl-w" style="margin-top:0"><table>
+    <thead><tr><th>Stage</th><th>What happens</th><th>Hours</th><th>Cost</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. Audit and structure</b></td>
+        <td>The full list from tab 01, your current pages mapped, and the structure for four buyer paths agreed before any design work</td>
+        <td>5 h</td><td>$125</td></tr>
+      <tr><td><b>2. Design refresh</b></td>
+        <td>A current look inside Wix, following the site you want to loosely copy once you tell me which one. Home plus one product template first, for sign-off.</td>
+        <td>14 h</td><td>$350</td></tr>
+      <tr><td><b>3. Rebuild the pages</b></td>
+        <td>All pages rebuilt with your existing copy placed. The COVID page and the duplicate removed, the misspelled address fixed with a redirect.</td>
+        <td>16 h</td><td>$400</td></tr>
+      <tr><td><b>4. Products and documents</b></td>
+        <td>Four product paths, grades and sieve data presented properly, SDS and OMRI certificate as downloads on the right pages</td>
+        <td>8 h</td><td>$200</td></tr>
+      <tr><td><b>5. Phones, speed and search</b></td>
+        <td>Checked on real phones, images sized, page titles and descriptions written, Google Business details matched</td>
+        <td>6 h</td><td>$150</td></tr>
+      <tr><td><b>6. Training and handover</b></td>
+        <td>One call walking your team through editing text, prices and documents, plus a short written guide</td>
+        <td>3 h</td><td>$75</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="money">
+    <div><span class="l">Total</span><span class="v">52 h</span></div>
+    <div><span class="l">At $25/hr</span><span class="v" style="color:var(--bronze)">$1,300</span></div>
+    <div><span class="l">Calendar</span><span class="v">4&ndash;5 wks</span></div>
+    <div><span class="l">Deposit</span><span class="v">None</span></div>
+  </div>
+
+  <div class="note good" style="margin-top:18px"><strong>What I need from you</strong>
+    <p>The website you want to loosely copy. Your SDS and OMRI certificate as PDFs. One sentence on where
+       the ore is mined. Everything else I can work from what is already on your site.</p></div>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <span>Four Buyers, One Site &middot; prepared for J.P. Austin</span>
+  <span>findings taken from jpaustin.com, October 2026</span>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s){return document.querySelector(s)};
+
+  try{ var st=localStorage.getItem('jpa-theme'); if(st) document.documentElement.setAttribute('data-theme',st); }catch(e){}
+  $('#theme').addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var dark = cur ? cur==='dark' : matchMedia('(prefers-color-scheme:dark)').matches;
+    var nx=dark?'light':'dark';
+    document.documentElement.setAttribute('data-theme',nx);
+    try{ localStorage.setItem('jpa-theme',nx); }catch(e){}
+  });
+
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){
+        var sel=o===t;
+        o.setAttribute('aria-selected',sel?'true':'false');
+        document.getElementById(o.getAttribute('aria-controls')).hidden=!sel;
+      });
+    });
+  });
+
+  var BUYERS=[
+    { k:'pool', n:'Pool contractor', sub:'builds and resurfaces pools', order:'pallets, seasonal',
+      need:['How many bags for a given pool size, worked out for them',
+            'Which product for a new base and which for a vinyl liner',
+            'Delivery lead time and whether you ship to their yard',
+            'A phone number that reaches somebody who knows pools'],
+      has:['A product page describing the aggregate',
+           'No coverage figures and no calculator',
+           'No lead time anywhere',
+           'A general contact form'],
+      gap:['They are standing in a yard with a quote to give',
+           'This buyer needs a number, not a description. Coverage per bag and a lead time turn a browse into a call. Both are facts you already know and neither is on the site.'] },
+    { k:'grower', n:'Organic grower', sub:'nursery or commercial horticulture', order:'bulk, repeat',
+      need:['The OMRI certificate, downloadable, with its number',
+            'Fine or medium grade and what each is used for',
+            'Pallet quantities and bulk pricing',
+            'Confidence the certification is current'],
+      has:['"OMRI Certified Organic" written as a sentence',
+           'Fine and medium named, not specified',
+           'No quantities or pricing',
+           'No certificate, no number, no date'],
+      gap:['Certification they cannot verify is certification they discount',
+           'OMRI listing is a purchasing requirement for certified growers, not a marketing line. As a downloadable certificate with a number it wins business. As a sentence it gets checked elsewhere.'] },
+    { k:'industrial', n:'Industrial buyer', sub:'steel plant or hazmat packing', order:'contract, large',
+      need:['A safety data sheet they can attach to a purchase order',
+            'Particle size distribution and bulk density as figures',
+            'Where the material is mined',
+            'Packaging options and whether you can hold stock'],
+      has:['"Completely non-toxic and inert" as a claim',
+           'A Technical Data page with nothing downloadable',
+           'Nothing at all about sourcing',
+           'A 10,000 sq ft warehouse mentioned'],
+      gap:['This is the buyer you are most likely losing silently',
+           'Procurement cannot raise a PO without documentation. If they cannot download it they email a competitor who can, and you never find out the enquiry existed.'] },
+    { k:'gardener', n:'Home gardener', sub:'square foot gardening', order:'one or two bags',
+      need:['What vermiculite does and why their mix needs it',
+            'What size bag and what it costs',
+            'Where to buy it without phoning a factory',
+            'A page that works on a phone'],
+      has:['A page at a misspelled address',
+           'No price and no bag size',
+           'No way to buy, only a quote request',
+           'A layout built for a desktop'],
+      gap:['The smallest orders, and the easiest search traffic',
+           'Square foot gardening is searched heavily and your page cannot be found under the correct spelling. Either serve this properly or point them at a stockist, but do not half-do it.'] }
+  ];
+  var cur=0, picks=$('#picks');
+
+  BUYERS.forEach(function(b,i){
+    var el=document.createElement('button');
+    el.className='pick'; el.type='button';
+    el.setAttribute('aria-pressed', i===0?'true':'false');
+    el.innerHTML='<b>'+b.n+'</b><span>'+b.sub+'</span>';
+    el.addEventListener('click',function(){ cur=i; render(); });
+    picks.appendChild(el);
+  });
+
+  function render(){
+    var b=BUYERS[cur];
+    [].slice.call(picks.children).forEach(function(el,i){
+      el.setAttribute('aria-pressed', i===cur?'true':'false'); });
+    $('#bName').textContent=b.n;
+    $('#bOrder').textContent=b.order;
+    $('#bNeed').innerHTML=b.need.map(function(x){return '<li>'+x+'</li>';}).join('');
+    $('#bHas').innerHTML=b.has.map(function(x){return '<li>'+x+'</li>';}).join('');
+    $('#bGap').innerHTML='<b>'+b.gap[0]+'</b><p>'+b.gap[1]+'</p>';
+  }
+  render();
+})();
+</script>
+
+</body>
+</html>

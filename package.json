@@ -1,0 +1,7 @@
+{
+  "name": "four-buyers-one-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A site audit and costed plan for jpaustin.com, a vermiculite manufacturer on Wix.",
+  "scripts": { "dev": "npx --yes serve . -l 3000", "start": "npx --yes serve . -l 3000" }
+}
